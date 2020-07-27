@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <script src="index.js"></script> -->
+
+</head>
+
+<body>
+    <div class="main-pg">
+        <div id="dog_result" class="dog-result-class">
+            <p>Random Dog</p>
+        </div>
+        <div class="button-class">
+            <button class="button-dog-class" id="dog_button">Get Dog</button>
+        </div>
+    </div>
+
+    <script>
+        const dog_result = document.getElementById('dog_result');
+        const dog_button = document.getElementById('dog_button');
+
+        dog_button.addEventListener('click', getRandomDog)
+
+        function getRandomDog() {
+            fetch('https://random.dog/woof.json')
+                .then(res => res.json())
+                .then(data => {
+                    dog_result.innerHTML = `<img src="${data.url}">`
+                })
+        }
+    </script>
+
+</body>
+
+</html>

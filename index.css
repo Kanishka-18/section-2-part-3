@@ -1,0 +1,40 @@
+body {
+    background-color: plum;
+}
+
+.main-pg {
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+
+.dog-result-class {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 550px;
+    background-color: black;
+    flex: 3;
+}
+
+.button-class {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dog-result-class img {
+    height: 90%;
+}
+
+.button-dog-class {
+    background-color: lightgrey;
+    border-radius: 4px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    margin: auto;
+    padding: 0.5vw 1vw;
+}
